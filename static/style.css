@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #0b121e;
+    color: #ffffff;
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow: hidden;
+}
+
+#globe-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header-bar {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 56px;
+    background: linear-gradient(180deg, rgba(0, 43, 73, 0.95) 0%, rgba(0, 30, 52, 0.85) 100%);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0, 165, 227, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    z-index: 1000;
+}
+
+.progress-bar-container {
+    position: absolute;
+    top: 56px; left: 0;
+    width: 100%; height: 3px;
+    background: rgba(0, 30, 52, 0.5);
+    z-index: 1001;
+    overflow: hidden;
+}
+
+#progress-bar {
+    width: 100%; height: 100%;
+    background: #00a5e3;
+    box-shadow: 0 0 8px #00a5e3;
+    transform-origin: left center;
+}
+
+.brand-logo {
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-logo span {
+    color: #00a5e3;
+    font-weight: 400;
+    font-size: 16px;
+    border-left: 1px solid rgba(255,255,255,0.2);
+    padding-left: 10px;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.count-badge {
+    font-size: 12px;
+    color: #00a5e3;
+    background: rgba(0, 165, 227, 0.15);
+    padding: 4px 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 165, 227, 0.3);
+    font-weight: 600;
+}
+
+.selector-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #c2d1e0;
+    font-weight: 600;
+}
+
+.custom-select {
+    background: #001e34;
+    color: #ffffff;
+    border: 1px solid #00a5e3;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+.dropdown-btn {
+    background: #001e34;
+    color: #ffffff;
+    border: 1px solid #00a5e3;
+    padding: 5px 12px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 160px;
+    justify-content: space-between;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 36px;
+    right: 0;
+    width: 310px;
+    max-height: 420px;
+    overflow-y: auto;
+    background: #0f1c2e;
+    border: 1px solid #00a5e3;
+    border-radius: 4px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.8);
+    padding: 10px;
+    display: none;
+    z-index: 2000;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(0,165,227,0.3);
+}
+
+.country-group {
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 8px;
+}
+.country-group:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.country-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #00a5e3;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.country-btn-toggle {
+    background: rgba(0, 165, 227, 0.2);
+    border: none;
+    color: #ffffff;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.country-btn-toggle:hover {
+    background: #00a5e3;
+}
+
+.feed-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
+    font-size: 12px;
+    color: #c2d1e0;
+    cursor: pointer;
+}
+.feed-option:hover {
+    color: #ffffff;
+}
+
+.feed-option input[type="checkbox"] {
+    accent-color: #00a5e3;
+    cursor: pointer;
+}
+
+.ts-marker-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: transform 0.15s ease, opacity 0.2s ease, border-color 0.15s ease;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    background: #ffffff;
+    padding: 1px;
+    border: 0.75px solid rgba(255, 255, 255, 0.9);
+    box-shadow: none;
+    will-change: transform, opacity;
+    user-select: none;
+}
+
+.ts-marker-icon:hover {
+    transform: translate(-50%, -50%) scale(1.3);
+    opacity: 1.0 !important;
+    border-color: #00a5e3;
+    box-shadow: 0 0 10px rgba(0, 165, 227, 0.8);
+    z-index: 10000;
+}
+
+.ts-card {
+    position: absolute;
+    width: 340px;
+    max-height: 520px;
+    overflow-y: auto;
+    background: #0f1c2e;
+    border: 1px solid rgba(0, 165, 227, 0.3);
+    border-top: 4px solid #00a5e3;
+    padding: 0;
+    border-radius: 4px;
+    display: none;
+    z-index: 99999;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.75);
+    pointer-events: auto;
+}
+
+.ts-card-img-container {
+    width: 100%; height: 180px;
+    background: #001e34;
+    position: relative;
+    overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.ts-card img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+}
+
+.ts-card-close {
+    position: absolute; top: 8px; left: 8px;
+    width: 24px; height: 24px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff; border: none; border-radius: 50%;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: bold; z-index: 10;
+}
+.ts-card-close:hover {
+    background: rgba(230, 0, 0, 0.8);
+}
+
+.ts-logo-badge {
+    position: absolute; top: 10px; right: 10px;
+    background: rgba(0, 30, 52, 0.85);
+    backdrop-filter: blur(4px);
+    padding: 4px 8px; border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex; align-items: center; gap: 6px;
+    font-size: 11px; font-weight: 700; color: #ffffff;
+}
+
+.ts-card-body {
+    padding: 16px;
+}
+
+.ts-meta {
+    font-size: 11px; font-weight: 700; color: #00a5e3;
+    text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;
+}
+
+.ts-card h4 {
+    margin: 0 0 10px 0; color: #ffffff;
+    font-size: 16px; font-weight: 700; line-height: 1.35;
+}
+
+.ts-card p {
+    font-size: 13px; color: #c2d1e0;
+    line-height: 1.5; margin: 0 0 18px 0;
+}
+
+.ts-btn {
+    color: #ffffff; background: #004577;
+    font-weight: 600; text-decoration: none;
+    padding: 8px 14px; display: inline-block;
+    font-size: 12px; border-radius: 2px; transition: filter 0.2s ease;
+}
+.ts-btn:hover {
+    filter: brightness(1.2);
+}
