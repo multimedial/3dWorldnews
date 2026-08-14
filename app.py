@@ -2,6 +2,7 @@ from flask import Flask, render_template, jsonify, request
 import feedparser
 import re
 import spacy
+from waitress import serve
 from datetime import datetime
 
 app = Flask(__name__)
@@ -219,4 +220,4 @@ def api_news():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    serve(app, host='0.0.0.0', port=80)
