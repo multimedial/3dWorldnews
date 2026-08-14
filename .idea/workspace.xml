@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7608fb4-eaf6-4da5-8609-d05522ffd821" name="Changes" comment="requirements addedd">
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    <list default="true" id="c7608fb4-eaf6-4da5-8609-d05522ffd821" name="Changes" comment="added feedparser to the requirements">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +110,39 @@
       <option name="project" value="LOCAL" />
       <updated>1786714166817</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added feedparser to the requirements">
+      <option name="closed" value="true" />
+      <created>1786714411861</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1786714411861</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added feedparser to the requirements">
+      <option name="closed" value="true" />
+      <created>1786714494888</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1786714494888</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added feedparser to the requirements">
+      <option name="closed" value="true" />
+      <created>1786714672003</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1786714672003</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added feedparser to the requirements">
+      <option name="closed" value="true" />
+      <created>1786715138018</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1786715138018</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -117,6 +150,7 @@
     <MESSAGE value="initial commit - vibe coded 3d news globe" />
     <MESSAGE value="requirements added" />
     <MESSAGE value="requirements addedd" />
-    <option name="LAST_COMMIT_MESSAGE" value="requirements addedd" />
+    <MESSAGE value="added feedparser to the requirements" />
+    <option name="LAST_COMMIT_MESSAGE" value="added feedparser to the requirements" />
   </component>
 </project>
