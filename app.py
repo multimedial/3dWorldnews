@@ -220,4 +220,4 @@ def api_news():
 
 
 if __name__ == '__main__':
-    serve(app, host='127.0.0.1', port=80, threads=16)
+    serve(app, host='127.0.0.1', port=80, threads=15)
